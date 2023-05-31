@@ -1,4 +1,4 @@
-# Recover
+# 从vscode恢复部分被删除代码
 适用场景：在vscode删除了文件但是想恢复文件
 
 目标：从vscode恢复删除文件
