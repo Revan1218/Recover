@@ -5,7 +5,7 @@
 
 前提：vscode需要更新至具有 local history功能
 
-Local History可以再设置中设置，可以设置最大历史记录条目数以及记录文件最大大小，**仅有小于这个阈值的文件可以被恢复**
+Local History可以在设置中搜索local history设置，可以设置最大历史记录条目数以及记录文件最大大小，**仅有小于这个阈值的文件可以被恢复**
 
 具体方法：
 1. 从文件中找到./vscode_server/data/User/History文件夹（此文件夹一般在/home目录下）
