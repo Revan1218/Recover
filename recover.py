@@ -4,7 +4,7 @@ import shutil
 
 
 def find_path(raw_path):
-    # vscode-remote://ssh-remote%2B10.109.246.222/data1/mcr/Python_remote/..
+    # vscode-remote://ssh-remote%2B10.109.246.222/data1/..
     idx_s = raw_path.find("/data1")
     ori_path = raw_path[idx_s:]
     ori_name = ori_path.split("/")[-1]
@@ -34,7 +34,7 @@ for file_path in file_paths:
     raw_path = entry["resource"]
     ori_path, ori_name = find_path(raw_path)
     ori_file = entry["entries"][-1]["id"]
-    print(ori_path)
-    os.rename(dirc+ori_file,dirc+ori_name)
+    if ori_name not in os.listdir(dirc):
+        os.rename(dirc+ori_file,dirc+ori_name)
     shutil.copyfile(dirc+ori_name,ori_path+ori_name)
     
